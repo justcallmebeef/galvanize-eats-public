@@ -10,6 +10,13 @@ h1 {
     color: white;
 }
 
+#orderButton {
+    display: flex;
+    justify-content: center;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
 .centered {
     position: absolute;
     top: 50%;
