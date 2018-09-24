@@ -46,3 +46,12 @@ h1 {
     align-items: flex-start;
     align-content: flex-start;
 }
+
+#orderStuff {
+    display: flex;
+    flex-direction: row;
+}
+
+select {
+    display: flex;
+}

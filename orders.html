@@ -22,117 +22,49 @@
         </div>
     </nav>
     <div class="food-container">
-        <h4>Menu</h4>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./media/burger.jpg">
-                    </div>
-                    <div class="card-content">
-                        <p>Cheeseburger</p>
-                        <p class="itemCost">$10.99</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">ADD TO ORDER</a>
-                    </div>
-                </div>
-            </div>
+        <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <div class="order-container">
+            <h4>Order</h4>
         </div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./media/cheese-pizza.png">
-                    </div>
-                    <div class="card-content">
-                        <p>Cheese Pizza</p>
-                        <p class="itemCost">$9.99</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">ADD TO ORDER</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./media/burger.jpg">
-                    </div>
-                    <div class="card-content">
-                        <p>Hamburger</p>
-                        <p class="itemCost">$8.99</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">ADD TO ORDER</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./media/pepporoni-pizza.png">
-                    </div>
-                    <div class="card-content">
-                        <p>Pepporoni Pizza</p>
-                        <p class="itemCost">$11.99</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">ADD TO ORDER</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12 m7">
-                <div class="card">
-                    <div class="card-image">
-                        <img src="./media/sausage-pizza.png">
-                    </div>
-                    <div class="card-content">
-                        <p>Sausage Pizza</p>
-                        <p class="itemCost">$12.99</p>
-                    </div>
-                    <div class="card-action">
-                        <a href="#">ADD TO ORDER</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="order-container">
-        <h4>Order</h4>
-    </div>
-    <div class="row">
-        <form class="col s12">
+        <div id="orderStuff">
             <div class="row">
-                <div class="input-field col s6">
-                    <i class="material-icons prefix"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">First Name</label>
-                </div>
-                <div class="input-field col s6">
-                    <i class="material-icons prefix"></i>
-                    <input id="icon_telephone" type="tel" class="validate">
-                    <label for="icon_telephone">Telephone</label>
-                </div>
+                <ul>
+                    <li class="orderList">food</li>
+                    <li class="orderList">food</li>
+                    <li class="orderList">food</li>
+                    <li class="orderList">food</li>
+                    <li class="orderList">food</li>
+                </ul>
             </div>
-        </form>
-    </div>
-    <div class="row">
-        <form class="col s12">
             <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Address</label>
-                </div>
+                <form class="col s12 m7">
+                    <div class="row">
+                        <div class="input-field col s5">
+                            <i class="material-icons prefix"></i>
+                            <input id="icon_prefix" type="text" class="validate">
+                            <label for="icon_prefix">First Name</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <i class="material-icons prefix"></i>
+                            <input id="icon_telephone" type="tel" class="validate">
+                            <label for="icon_telephone">Telephone</label>
+                        </div>
+                        <div class="input-field col s5">
+                            <i class="material-icons prefix"></i>
+                            <input id="icon_telephone" type="tel" class="validate">
+                            <label for="icon_telephone">Address</label>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
+    <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
