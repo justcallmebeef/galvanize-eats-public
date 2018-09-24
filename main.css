@@ -42,9 +42,7 @@ h1 {
 
 .food-container {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    align-content: flex-start;
+    flex-direction: column;
 }
 
 #orderStuff {
@@ -54,4 +52,9 @@ h1 {
 
 select {
     display: flex;
+}
+
+#quantity {
+    width: 20vw;
+    height: 10vh;
 }
