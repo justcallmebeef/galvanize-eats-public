@@ -10,11 +10,6 @@ h1 {
     color: white;
 }
 
-.container {
-    position: relative;
-    text-align: center;
-}
-
 .centered {
     position: absolute;
     top: 50%;
@@ -24,4 +19,23 @@ h1 {
 
 .responsive-img {
     opacity: .7;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+#cardBackground {
+    background: #008B8B;
+
+}
+
+.food-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
 }
