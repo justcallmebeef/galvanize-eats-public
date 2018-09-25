@@ -43,9 +43,10 @@ h1 {
 .food-container {
     display: flex;
     flex-direction: column;
+    margin: 5em;
 }
 
-#orderStuff {
+#orderListContainer {
     display: flex;
     flex-direction: row;
 }
