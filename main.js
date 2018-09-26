@@ -3,6 +3,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var form = document.querySelector("form")
     var orderList = document.querySelector(".orderList")
     var addButton = document.querySelector("#addButton")
+    var totalContainer = document.querySelector("#totalContainer")
+    var subTotal = document.createElement("p")
+    var tax = document.createElement("p")
+    var total = document.createElement("p")
+    totalContainer.appendChild(subTotal)
+    totalContainer.appendChild(tax)
+    totalContainer.appendChild(total)
+    var subTotalNum = 0
+    var taxNum = 0
     var currentItem
 
     fetch("https://galvanize-eats-api.herokuapp.com/menu")
@@ -33,13 +42,27 @@ document.addEventListener("DOMContentLoaded", function (event) {
             addButton.addEventListener("click", function addItem(event) {
                 var quantity = document.getElementById("quantity").value
                 var orderListItem = document.createElement("li")
-                var subTotal = document.createElement("p")
-                var tax = document.createElement("p")
-                var total = document.createElement("p")
                 orderList.appendChild(orderListItem)
                 orderListItem.innerHTML = currentItem.name + " " + "$" + (currentItem.price * quantity)
 
                 console.log(quantity)
+            })
+        })
+        .then(function (data) {
+            addButton.addEventListener("click", function addTotals(event) {
+                var quantity = document.getElementById("quantity").value
+                var subTotalValue = parseFloat(currentItem.price * quantity)
+                subTotalNum += subTotalValue
+                subTotal.innerHTML = "SubTotal:" + " " + "$" + subTotalNum.toFixed(2)
+
+                var taxTotalValue = parseFloat(subTotalValue * .04)
+                taxNum += taxTotalValue
+                tax.innerHTML = "Tax:" + " " + "$" + taxNum.toFixed(2)
+
+                var totalNum = 0
+                var totalValue = parseFloat(taxNum + subTotalNum)
+                totalNum += totalValue
+                total.innerHTML = "Total:" + " " + "$" + totalNum.toFixed(2)
             })
         })
         .catch(function (error) {

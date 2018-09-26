@@ -65,5 +65,11 @@ select {
 }
 
 li {
+    font-size: 1.2em;
+}
+
+p {
     font-size: 1.5em;
+    margin-left: 1em;
+
 }
