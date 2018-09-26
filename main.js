@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var form = document.querySelector("form")
     var orderList = document.querySelector(".orderList")
     var addButton = document.querySelector("#addButton")
-    var menuSelectionPrice
-    var menuSelection
+    var currentItem
 
     fetch("https://galvanize-eats-api.herokuapp.com/menu")
         .then(function (response) {
@@ -15,23 +14,32 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 var dropdownMenu = document.createElement("option")
                 foodList.appendChild(dropdownMenu)
                 dropdownMenu.innerHTML = data.menu[i].name + " " + "$" + data.menu[i].price
-                dropdownMenu.setAttribute('value', data.menu[i].name)
-                // dropdownMenu.setAttribute('value', data.menu[i].price)
+                var item = JSON.stringify({
+                    name: data.menu[i].name,
+                    price: data.menu[i].price
+                })
+                dropdownMenu.setAttribute('value', item)
             }
             return data
         })
         .then(function (data) {
             foodList.addEventListener("change", function selectItem(event) {
-                console.log(event.target)
                 var valueSelected = foodList.value
+                var item = JSON.parse(valueSelected)
+                currentItem = item
             })
         })
         .then(function (data) {
             addButton.addEventListener("click", function addItem(event) {
+                var quantity = document.getElementById("quantity").value
                 var orderListItem = document.createElement("li")
-                var valueSelected = document.createTextNode(foodList.value)
+                var subTotal = document.createElement("p")
+                var tax = document.createElement("p")
+                var total = document.createElement("p")
                 orderList.appendChild(orderListItem)
-                orderListItem.appendChild(valueSelected)
+                orderListItem.innerHTML = currentItem.name + " " + "$" + (currentItem.price * quantity)
+
+                console.log(quantity)
             })
         })
         .catch(function (error) {

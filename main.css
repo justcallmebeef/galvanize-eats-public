@@ -59,3 +59,11 @@ select {
     width: 20vw;
     height: 10vh;
 }
+
+#submitButton {
+    margin-left: 9em;
+}
+
+li {
+    font-size: 1.5em;
+}
