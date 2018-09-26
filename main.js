@@ -93,7 +93,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
         fetch("https://galvanize-eats-api.herokuapp.com/orders", settings)
             .then(response => response.text())
             .then(function (response) {
-                console.log(response)
+                var saveStatus = document.querySelector("#save-status")
+                saveStatus.innerHTML = response
+                saveStatus.style.opacity = "1"
+                setTimeout(function () {
+                    saveStatus.style.opacity = "0"
+                }, 2000)
             })
             .catch(function (error) {
                 console.error(error)

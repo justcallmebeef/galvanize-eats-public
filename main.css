@@ -76,3 +76,10 @@ p {
 .frogLeg {
     font-size: 1.6em;
 }
+
+#save-status {
+    text-align: center;
+    opacity: 0;
+    transition: opacity .5 ease-in-out;
+    font-size: 3em;
+}
