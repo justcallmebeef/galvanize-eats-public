@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var subTotal = document.createElement("p")
     var tax = document.createElement("p")
     var total = document.createElement("p")
+    total.setAttribute('class', 'frogLeg')
     totalContainer.appendChild(subTotal)
     totalContainer.appendChild(tax)
     totalContainer.appendChild(total)
@@ -44,8 +45,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 var orderListItem = document.createElement("li")
                 orderList.appendChild(orderListItem)
                 orderListItem.innerHTML = currentItem.name + " " + "$" + (currentItem.price * quantity)
-
-                console.log(quantity)
             })
         })
         .then(function (data) {
@@ -68,4 +67,37 @@ document.addEventListener("DOMContentLoaded", function (event) {
         .catch(function (error) {
             console.error(error)
         });
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var submitButton = document.querySelector("#submitButton")
+        var nameInput = document.querySelector("#name")
+        var telephoneInput = document.querySelector("#phone")
+        var addressInput = document.querySelector("#address")
+
+        var delivery = {
+            'name': nameInput.value,
+            'telephone': telephoneInput.value,
+            'address': addressInput.value,
+        }
+
+        console.log(delivery)
+
+        var settings = {
+            method: "POST",
+            headers: new Headers({
+                'content-type': 'application/json'
+            }),
+            body: JSON.stringify(delivery)
+        }
+        fetch("https://galvanize-eats-api.herokuapp.com/orders", settings)
+            .then(response => response.text())
+            .then(function (response) {
+                console.log(response)
+            })
+            .catch(function (error) {
+                console.error(error)
+            })
+
+    })
 });

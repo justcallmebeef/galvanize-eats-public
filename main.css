@@ -69,7 +69,10 @@ li {
 }
 
 p {
-    font-size: 1.5em;
-    margin-left: 1em;
+    font-size: 1.2em;
 
+}
+
+.frogLeg {
+    font-size: 1.6em;
 }
