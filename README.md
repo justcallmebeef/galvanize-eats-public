@@ -18,6 +18,6 @@ HTML, CSS, Materialize, Flexbox, and Javascript
 
 ![Order Wireframe](assets/order-wireframe.png)
 
-## Authors
+## Author
 
 * **Bethany Mitch** - *BM* - [justcallmebeef](https://github.com/justcallmebeef)
