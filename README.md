@@ -4,7 +4,7 @@ This site contains two pages. The home page contains information on Galvanize Ea
 
 ## Website URL: 
 
-http://justcallmebeef.surge.sh/index.html
+http://justcallmebeef-gdelivers.surge.sh/index.html
 
 ### Technologies 
 
