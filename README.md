@@ -13,7 +13,7 @@ HTML, CSS, Materialize, Flexbox, and Javascript
 ### Wireframe
 
 ![Index Wireframe](assets/index-wireframe.png)
-![GitHub Logo](/Users/bethanymitch/block1/galvanize-eats/assets/order-wireframe.png)
+![Order Wireframe](assets/order-wireframe.png)
 
 ## Authors
 
