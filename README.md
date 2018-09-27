@@ -10,9 +10,12 @@ http://justcallmebeef-gdelivers.surge.sh/index.html
 
 HTML, CSS, Materialize, Flexbox, and Javascript 
 
-### Wireframe
+### Wireframes
 
 ![Index Wireframe](assets/index-wireframe.png)
+
+### 
+
 ![Order Wireframe](assets/order-wireframe.png)
 
 ## Authors
