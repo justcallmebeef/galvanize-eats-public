@@ -6,15 +6,16 @@ nav {
     background: #008B8B;
 }
 
+.brand-logo {
+    margin-left: .5em;
+}
+
 h1 {
     color: white;
 }
 
-.order-container {
-    border: solid 1px black;
-    display: flex;
-    flex-direction: row;
-
+h5 {
+    margin-left: 1em;
 }
 
 #orderButton {
@@ -42,8 +43,10 @@ h1 {
     align-content: center;
 }
 
-#cardBackground {
+.cardBackground {
     background: #008B8B;
+    color: white;
+    padding: 1em;
 
 }
 
@@ -60,7 +63,6 @@ h1 {
 #orderListContainer {
     display: flex;
     flex-direction: row;
-    border: solid 1px black;
 }
 
 select {
@@ -73,6 +75,7 @@ select {
 
 li {
     font-size: 1.2em;
+    margin-left: .5em;
 }
 
 p {
@@ -89,4 +92,21 @@ p {
     opacity: 0;
     transition: opacity .5 ease-in-out;
     font-size: 3em;
+}
+
+.order-container {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 50vh;
+}
+
+#form-container {
+    width: 40vw;
+}
+
+.bottomDiv {
+    display: flex;
+    justify-content: space-between;
 }

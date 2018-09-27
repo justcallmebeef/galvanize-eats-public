@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var subTotalNum = 0
     var taxNum = 0
     var currentItem
+    var deliveryOrder = {}
 
     fetch("https://galvanize-eats-api.herokuapp.com/menu")
         .then(function (response) {
@@ -44,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 var quantity = document.getElementById("quantity").value
                 var orderListItem = document.createElement("li")
                 orderList.appendChild(orderListItem)
-                orderListItem.innerHTML = currentItem.name + "    " + "x" + " " + quantity + " " + "$" + (currentItem.price * quantity)
+                orderListItem.innerHTML = currentItem.name + " " + "x" + " " + quantity + " " + "$" + (currentItem.price * quantity)
+                deliveryOrder[quantity] = currentItem.name
             })
         })
         .then(function (data) {
@@ -87,6 +89,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             'telephone': telephoneInput.value,
             'address': addressInput.value,
         }
+
+        delivery["order"] = deliveryOrder
 
         console.log(delivery)
 

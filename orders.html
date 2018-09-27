@@ -30,16 +30,18 @@
                 <button id="addButton" class="btn waves-effect waves-light" type="button" name="action">Add Item</button>
             </div>
         </div>
-        <div class="order-container">
-            <h5>Order</h5>
-        </div>
-        <div id="orderListContainer">
-            <div class="row">
-                <ul class="orderList">
-                </ul>
+        <div class="bottomDiv">
+            <div class="order-container">
+                <h5>Order</h5>
+                <div id="orderListContainer">
+                    <div class="col">
+                        <ul class="orderList">
+                        </ul>
+                    </div>
+                    <div id="totalContainer" class="row"></div>
+                </div>
             </div>
-            <div id="totalContainer" class="row"></div>
-            <div class="row">
+            <div id="form-container">
                 <form class="col s12 m7">
                     <div class="row">
                         <div class="input-field col s10">
@@ -60,8 +62,8 @@
                     </div>
                     <button id="submitButton" class="btn waves-effect waves-light" type="submit" name="action">Deliver
                         It!</button>
+                    <p id="save-status" class="col s12 m5"></p>
                 </form>
-                <p id="save-status" class="col s12 m5"></p>
             </div>
         </div>
     </div>
