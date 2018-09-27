@@ -43,6 +43,10 @@ h5 {
     align-content: center;
 }
 
+.cards {
+    margin: 2em;
+}
+
 .cardBackground {
     background: #008B8B;
     color: white;
