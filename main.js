@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 var quantity = document.getElementById("quantity").value
                 var orderListItem = document.createElement("li")
                 orderList.appendChild(orderListItem)
-                orderListItem.innerHTML = currentItem.name + " " + "$" + (currentItem.price * quantity)
+                orderListItem.innerHTML = currentItem.name + "    " + "x" + " " + quantity + " " + "$" + (currentItem.price * quantity)
             })
         })
         .then(function (data) {
@@ -74,6 +74,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var nameInput = document.querySelector("#name")
         var telephoneInput = document.querySelector("#phone")
         var addressInput = document.querySelector("#address")
+        var input = document.querySelectorAll(".validate")
+
+        for (i = 0; i < input.length; i++) {
+            if (input[i].value.length < 1) {
+                return alert("Please finish filling out the form.")
+            }
+        }
 
         var delivery = {
             'name': nameInput.value,

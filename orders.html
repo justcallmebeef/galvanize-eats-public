@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -20,14 +20,15 @@
         </div>
     </nav>
     <div class="food-container">
-        <select id="foodList">
-            <option value="" disabled selected>Menu</option>
-        </select>
-        <div class="input-field col s2">
-            <i class="material-icons prefix"></i>
-            <input id="quantity" id="icon_prefix" type="number" class="validate">
-            <label for="icon_prefix">Quantity</label>
-            <button id="addButton" class="btn waves-effect waves-light" type="button" name="action">Add Item</button>
+        <div class="food-quantity-container">
+            <select id="foodList">
+                <option value="" disabled selected>Menu</option>
+            </select>
+            <div class="input-field col s2">
+                <input id="quantity" type="number" class="validate">
+                <label>Quantity</label>
+                <button id="addButton" class="btn waves-effect waves-light" type="button" name="action">Add Item</button>
+            </div>
         </div>
         <div class="order-container">
             <h5>Order</h5>
@@ -44,17 +45,17 @@
                         <div class="input-field col s10">
                             <i class="material-icons prefix"></i>
                             <input id="name" type="text" class="validate">
-                            <label for="icon_prefix">First Name</label>
+                            <label>First Name</label>
                         </div>
                         <div class="input-field col s10">
                             <i class="material-icons prefix"></i>
                             <input id="phone" type="text" class="validate">
-                            <label for="icon_telephone">Telephone</label>
+                            <label>Telephone</label>
                         </div>
                         <div class="input-field col s10">
                             <i class="material-icons prefix"></i>
                             <input id="address" type="text" class="validate">
-                            <label for="icon_prefix">Address</label>
+                            <label>Address</label>
                         </div>
                     </div>
                     <button id="submitButton" class="btn waves-effect waves-light" type="submit" name="action">Deliver

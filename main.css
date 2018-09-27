@@ -10,6 +10,13 @@ h1 {
     color: white;
 }
 
+.order-container {
+    border: solid 1px black;
+    display: flex;
+    flex-direction: row;
+
+}
+
 #orderButton {
     display: flex;
     justify-content: center;
@@ -40,6 +47,10 @@ h1 {
 
 }
 
+.food-quantity-container {
+    width: 30vw;
+}
+
 .food-container {
     display: flex;
     flex-direction: column;
@@ -49,15 +60,11 @@ h1 {
 #orderListContainer {
     display: flex;
     flex-direction: row;
+    border: solid 1px black;
 }
 
 select {
     display: flex;
-}
-
-#quantity {
-    width: 20vw;
-    height: 10vh;
 }
 
 #submitButton {
